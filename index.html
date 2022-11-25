@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prosty kalkulator</title>
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="style.scss">
+</head>
+
+<body>
+  <main>
+    <div class="controls">
+      <div class="controls__content">
+        <div class="row">
+          <label for="num-1">#1:</label>
+          <input type="text" id="num-1">
+          <label for="num-2">#2:</label>
+          <input type="text" id="num-2">
+        </div>
+        <div class="row">
+          <button class="action" id="btn-add">+</button>
+          <button class="action" id="btn-subtract">-</button>
+          <button class="action" id="btn-multiply">*</button>
+          <button class="action" id="btn-divide">/</button>
+          <button class="action" id="btn-power">x<sup>y</sup></button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="result">Wynik: <span id="result">0</span></div>
+      </div>
+    </div>
+    <div class="b">
+      <div class="row">
+        <button class="action" id="btn-theme-light">jasny motyw</button>
+        <button class="action" id="btn-theme-dark">ciemny motyw</button>
+        <button class="action" id="btn-list">lista</button>
+      </div>
+      <div id="result-2"></div>
+    </div>
+    <button id="btn-r">R</button>
+  </main>
+</body>
+<script src="index.js"></script>
+
+</html>

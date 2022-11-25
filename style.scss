@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+$color-bkg-dark: #1e2e42;
+$color-text-light: #213f63;
+
+body {
+  background-color: $color-bkg-dark;
+
+  &.theme--light {
+    background-color: #e9c13c;
+  }
+}
+
+button {
+  padding: 0.5rem 1rem;
+  border: 2px solid #fff;
+  border-radius: 0.5rem;
+  color: #fff;
+  font-size: 18px;
+  font-family: monospace;
+  background: transparent;
+
+  &:hover {
+    color: #000;
+    background-color: #fff;
+    cursor: pointer;
+  }
+
+  .theme--light & {
+    border-color: $color-text-light;
+    color: $color-text-light;
+
+    &:hover {
+      background-color: $color-text-light;
+      color: #fff;
+    }
+  }
+}
+
+input {
+  padding: 0.5rem;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 18px;
+  background-color: transparent;
+  border: 3px solid #fff;
+  color: #fff;
+  border-radius: 0.5rem;
+
+  &:focus {
+    border: 3px solid #fff;
+    box-shadow: 0 0 30px -15px #fff inset;
+  }
+
+  .theme--light & {
+    border-color: $color-text-light;
+    color: $color-text-light;
+
+    &:focus {
+      box-shadow: 0 0 30px -15px $color-text-light inset;
+    }
+  }
+}
+
+.controls {
+  background: linear-gradient(#064153, $color-bkg-dark);
+  border-bottom: 3px solid #fff;
+  margin-bottom: 2rem;
+
+  .theme--light & {
+    background: none;
+    border-color: $color-bkg-dark;
+  }
+
+  & * {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 600px;
+  }
+}
+
+.result {
+  color: #fff;
+  font-size: 30px;
+
+  .theme--light & {
+    color: $color-text-light;
+  }
+
+  #result {
+    font-family: Tahoma, sans-serif;
+    font-weight: 600;
+  }
+}
+
+label {
+  color: #fff;
+
+  .theme--light & {
+    color: $color-text-light;
+  }
+}
+
+#btn-r {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  min-width: 80px;
+  transform: rotate(180deg) translate(20px, 20px);
+}
+
+#result-2 {
+  margin-top: 20px;
+  color: #fff;
+  font-size: 21px;
+  font-family: 'Courier New', Courier, monospace;
+
+  .theme--light & {
+    color: $color-text-light;
+  }
+}
